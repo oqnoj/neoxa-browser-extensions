@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      width: 240px;
+      padding: 16px;
+      background: #1e1e1e;
+      color: #ffffff;
+      margin: 0;
+      text-align: center;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 13px;
+      color: #8ab4f8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    #price-display {
+      font-size: 22px;
+      font-weight: bold;
+      color: #51cf66;
+      margin-bottom: 12px;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    button:hover {
+      background: #2563eb;
+    }
+    .footer {
+      font-size: 10px;
+      color: #888;
+      border-top: 1px solid #333;
+      padding-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Neoxa BTCB2 (XBT)</h3>
+  <div id="price-display">Fetching...</div>
+  <button id="refresh-btn">🔄 Refresh Price</button>
+  <div class="footer">Source: Neoxa Exchange API</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

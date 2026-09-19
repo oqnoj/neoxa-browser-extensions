@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Neoxa Ticker Settings</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #121212;
+      color: #e0e0e0;
+    }
+    h2 { color: #8ab4f8; margin-top: 0; }
+    .section {
+      background: #1e1e1e;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    label { display: block; margin-bottom: 8px; cursor: pointer; }
+    select {
+      background: #2d2d2d;
+      color: #fff;
+      border: 1px solid #444;
+      padding: 6px;
+      border-radius: 4px;
+      width: 100%;
+      margin-top: 6px;
+    }
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      max-height: 250px;
+      overflow-y: auto;
+      border: 1px solid #333;
+      padding: 10px;
+      border-radius: 4px;
+      background: #181818;
+    }
+    .checkbox-grid label {
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      width: 100%;
+    }
+    button:hover { background: #2563eb; }
+    #status {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12px;
+      color: #51cf66;
+      height: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Neoxa Extension Settings</h2>
+
+  <div class="section">
+    <label>
+      <input type="checkbox" id="badge-toggle"> Enable Toolbar Badge
+    </label>
+    <div style="margin-top: 10px;">
+      <label for="badge-select">Select Token for Toolbar Badge:</label>
+      <select id="badge-select">
+        <option value="">-- Choose Token --</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>Select Tickers to Display in Popup</h3>
+    <div id="tickers-container" class="checkbox-grid">
+      Loading available tokens...
+    </div>
+  </div>
+
+  <button id="save-btn">Save Settings</button>
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
